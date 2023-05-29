@@ -4,11 +4,9 @@ public class TicketTimeComparator implements Comparator<Ticket> {
 
     @Override
     public int compare(Ticket t1, Ticket t2) {
-        if (t1.getTimeTo() - t1.getTimeFrom() < t2.getTimeTo() - t2.getTimeFrom()) {
-            return -1;
-        } else if (t1.getTimeTo() - t1.getTimeFrom() > t2.getTimeTo() - t2.getTimeFrom()) {
-            return 1;
-        }
-        return 0;
+        int time1 = t1.getTimeTo() - t1.getTimeFrom();
+        int time2 = t2.getTimeTo() - t2.getTimeFrom();
+
+        return time1 - time2;
     }
 }

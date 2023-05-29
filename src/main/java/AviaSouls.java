@@ -38,6 +38,7 @@ public class AviaSouls {
                 result[i + 1] = temp;
             }
         }
+        Arrays.sort(result);
         return result;
     }
 
