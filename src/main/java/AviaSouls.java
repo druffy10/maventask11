@@ -30,14 +30,6 @@ public class AviaSouls {
                 }
             }
         }
-        int n = result.length;
-        for (int i = 0; i < n - 1; i++) {
-            if (result[i].getPrice() > result[i + 1].getPrice()) {
-                Ticket temp = result[i];
-                result[i] = result[i + 1];
-                result[i + 1] = temp;
-            }
-        }
         Arrays.sort(result);
         return result;
     }
